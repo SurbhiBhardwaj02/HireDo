@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Details</title>
+    <script src="https://kit.fontawesome.com/5a010fa73c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/Images/Hlogowhite.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/loader.css"> 
+    <!-- <link rel="stylesheet" href="/CSS/home.css"> -->
+    <script src="/Javascript/loader.js"></script>
+    <style>
+        #contactus{
+  width: 100fr;
+  margin: auto;
+  margin-top: 60px;
+  padding: 40px;
+  background-color: #eeeeeefb;
+}
+.end h5{
+text-align: center;
+color: white;
+}
+.end{
+  width: 100fr;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #018676;
+  margin-top: 20px;
+  
+
+}
+        .container:first-child{
+  background-color: white;
+  font-weight: bold;
+  
+}
+.container:first-child a{
+  color: #018676;
+  font-size: large;
+}
+.navbar{
+  background-color: white;
+/* width: 100vw; */
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.navbar-nav ,.nav-item{
+  margin-right: 20px;
+  font-weight: 350;
+
+}
+        .card{
+    -moz-border-radius: 2%;
+    -webkit-border-radius: 2%;
+    border-radius: 2%;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.08);
+    
+    
+    
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.lab{
+    text-align: start;
+}
+.profile .profile-body {
+    padding: 20px;
+    background: #f7f7f7;
+    
+}
+
+.profile .profile-bio {
+    background: #fff;
+    position: relative;
+    padding: 15px 10px 5px 15px;
+    
+}
+
+.profile .profile-bio a {
+    left: 50%;
+    bottom: 20px;
+    margin: -62px;
+    text-align: center;
+    position: absolute;
+      
+}
+
+.profile .profile-bio h2 {
+    margin-top: 0;
+    font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #585f69;
+    margin-top: 5px;
+    text-shadow: none;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+h2 {
+    font-size: 24px;
+    line-height: 33px;
+}
+
+p, li, li a {
+    color: #555;
+} 
+#button{
+    background-color: #018767;
+    margin: 5px;
+}
+#button:hover{
+    background-color: white;
+    border: 2px solid #018767;
+    color:#018767;
+    /* box-shadow: 2px 2px 2px  gray; */
+}
+#but{
+    background-color: #018767;
+    border: 0px;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+#but:hover{
+    background-color: white;
+    border: 2px solid #018767;
+    color:#018767;
+}
+ol{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.container:first-child a:hover{
+color: black;
+text-decoration: underline;
+/* text-decoration:  underline 1px;; */
+  font-weight: 400;
+  transition: 0.2s;
+}
+    </style>
+</head>
+<body style="background-color: #01867632">
+    <div id="loader">
+
+    </div>
+    <%- include('partials/navbar2') %>
+    <br>
+    <div class="container py-3">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+            <ol class="breadcrumb mb-0">
+              <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+              <li style="">
+                <form action="/hiredo/user/<%=data._id%>" method="post">
+                    <button type="submit" id="but">Edit Profile</button>
+                </form>
+                
+                
+            </li>
+              
+            </ol>
+            
+          </nav>
+    </div> 
+
+
+     
+      <!-- <center><h1>Users Details</h1></center> -->
+ <div class="container bootstrap snippets bootdey" >
+    
+    
+    <div class="profile card">
+        <div class="profile-body">
+            <div class="profile-bio">
+                <div class="row">
+                    
+                    <div class="col-md-6" >
+                        <h2><%=data.name%></h2>
+                        <span> <%=data.email%></span>
+                        
+                        
+                        <hr>
+                        <p><strong>Address : </strong><%=data.address%></p>
+                        <p><%=data.city%>,<%=data.state%></p>
+                        <p><strong>Postal code : </strong><%=data.postalcode%></p>
+                        <p><strong>Phone : </strong><%=data.phone%></p>
+                        
+                        <form action="/hiredo/workerlist/<%=data._id%>" method="post">
+                            <button id="button" type="submit" class="btn btn-success">Want to Hire? Click here!</button>
+                        </form>
+                          
+                    </div>
+                      
+                </div> 
+            </div>
+    	</div>
+    </div>
+</div>   
+<br>
+<%-include('partials/contact') %>
+
+</body>
+</html> 

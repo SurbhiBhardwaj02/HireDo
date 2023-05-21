@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+<link rel="stylesheet" href="/CSS/Email_Verify.css">
+<link rel="shortcut icon" href="/Images/Hlogowhite.png" type="image/x-icon">
+<link rel="stylesheet" href="/CSS/loader.css"> 
+<script src="/Javascript/loader.js"></script>
+</head>
+<body>
+    <div id="loader">
+
+    </div>
+    <!-- mess,email -->
+    <div class="back"></div>
+    <section>
+    <h1>Verify your email</h1>
+    <div id="innerbox">
+        <div class="form">
+    <form action="/hiredo/check" method="POST">
+        <h4>One Time Password is sent to <span>"<%=email%>"</span></h4>
+
+        <input type="number" name="otp" placeholder="OTP" minlength="5" maxlength="6" required>
+        <button type="submit">Verify</button>
+  <h3><%=mess%></h3>
+    </form>
+</div>
+<div id="image">
+    <img src="/Images/mail2.png" alt="Mail recived">
+</div>
+    </div>
+</section>
+
+</body>
+</html>

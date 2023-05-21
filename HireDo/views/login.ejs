@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiredo-Login</title>
+    <link rel="shortcut icon" href="/Images/Hlogowhite.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/CSS/Login.css">  
+    <link rel="stylesheet" href="/CSS/loader.css"> 
+</head>
+<body>
+    <div id="loader">
+
+    </div>
+    <img id="logo" src="/Images/HIREDOLOGO.png" alt="">
+    <section id="backcircle"></section>
+    <img id="cartoon" src="/Images/login.png" alt="">
+
+    <div id="box">
+
+    
+    <h1>Login</h1>
+    <h2 id="message"><%= mess %></h2>
+
+    <form action="/hiredo/login" method="POST">
+    <label for="email">Email Address</label>
+    <!-- <i class="fa fa-envelope icon"></i> -->
+    <input type="email" name="email" required placeholder="Email Address">
+    <label for="password">Password</label>
+    <input type="password" name="password" required placeholder="Password">
+    <a  href="/HireDo/forgot"><h3>Forgot Password?</h3></a>
+
+    <div id="radios">
+<div class="radio">
+
+    <label for="worker" style="display: inline;">Worker</label>
+    <input id="worker" type="radio" name="worker" onclick="toggleW()">
+</div>
+<div class="radio">
+    <label for="user">User</label>
+    <input id="user" type="radio" name="user" onclick="toggleU()" > 
+</div>
+</div>
+    <button type="submit">Submit</button>
+</form>
+<br>
+<p>Not a member? <a href="/hiredo/signup"><span >Signup now</span></a></p>
+
+</div>
+<div id="over">
+    
+</div>
+
+
+
+<script>
+    function toggleW(){
+        const r2=document.getElementById('user');
+        r2.checked=false;
+    }
+    function toggleU(){
+        const r1=document.getElementById('worker');
+        r1.checked=false;
+    }
+</script>
+<script src="/Javascript/loader.js"></script>
+</body>
+</html>

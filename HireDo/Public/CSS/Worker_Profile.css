@@ -1,0 +1,137 @@
+body{
+    background-color:white ;
+}
+form{
+   
+    display: flex;
+width: 50vw;
+    flex-direction: column;
+
+
+ 
+}
+
+
+#box{
+    background-color:white;
+    width:50vw;
+ 
+
+    padding: 50px;
+    /* border-radius: 30px;
+    box-shadow: 5px 5px 10px black ; */
+    border-left: 5px solid grey;
+    margin: 35px 20px 35px;
+   font-weight: bold    ;
+   overflow: scroll;
+   overflow-x: hidden;
+}
+#inp{
+    width: 100%;
+    margin: 0px 0px 10px ;
+   
+}
+.whole{
+    display: flex;
+    height: 100vh;
+    background-color:#01867621;
+    
+}
+.h1part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50vw;
+    text-align: center;
+  
+
+   
+    
+}
+.h1part h1{
+    font-size: 100px;
+    color: #018676;
+        text-shadow: 5px 5px 5px grey;
+    
+
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #but{
+    display: flex;
+  
+  
+  }
+  #btns
+  {
+    background-color: #018676;
+    font-weight: bold;
+    
+  }
+  #btns:hover{
+    background-color: white;
+color: #018676;
+font-weight: bold;
+
+
+  }
+  @media screen and (max-width:750px) {
+.whole{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+#box{
+width: 80vw;
+border-top: 5px solid grey;
+border-left: 0px;
+margin-top:350px;
+
+}
+.h1part h1{
+    font-size: 70px;color: white;text-align: center;
+    
+}
+.h1part{
+    height: 90vh;
+    background-color: #007567;
+    position:absolute;
+    z-index: -1; 
+    
+    border-radius: 0% 0px 60% 0%;
+    width: 100%;
+}
+#btns{
+    margin-left: 5px;
+}
+  }
